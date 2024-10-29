@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
               Center(child: Text('Exit Tab')),
             ],
           ),
-          backgroundColor: const Color.fromARGB(255, 158, 147, 218),
+          backgroundColor: const Color.fromARGB(255, 249, 249, 250),
         ),
       ),
     );
