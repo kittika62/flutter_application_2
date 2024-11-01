@@ -15,9 +15,11 @@ class Background extends StatelessWidget {
             ),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.all(30),
-          child: Column(
+        Container(
+          padding: const EdgeInsets.all(30),
+          width: MediaQuery.of(context).size.width,
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 'Test',
@@ -26,7 +28,28 @@ class Background extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
+              Text(
+                'datassssssssssssss',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white,
+                ),
+              ),
             ],
+          ),
+        ),
+        const Text(
+          'data',
+          style: TextStyle(
+            fontSize: 24,
+            color: Colors.white,
+          ),
+        ),
+        const Text(
+          '11111111111111',
+          style: TextStyle(
+            fontSize: 24,
+            color: Colors.white,
           ),
         ),
       ],
