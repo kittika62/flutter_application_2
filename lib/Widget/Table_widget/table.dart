@@ -86,7 +86,7 @@ class Tabledata extends StatelessWidget {
                             ),
                           ),
                           SizedBox(width: 10),
-                          SelectDateStart(),
+                          StartSelectDate(),
                         ],
                       ),
                       Row(
@@ -99,7 +99,7 @@ class Tabledata extends StatelessWidget {
                             ),
                           ),
                           SizedBox(width: 20),
-                          SelectDateEnd(),
+                          EndSelectDate(),
                         ],
                       ),
                     ],
