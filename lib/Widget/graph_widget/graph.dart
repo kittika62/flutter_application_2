@@ -8,14 +8,14 @@ class Background extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/background.jpg'),
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
+        // Container(
+        //   decoration: const BoxDecoration(
+        //     image: DecorationImage(
+        //       image: AssetImage('assets/images/background.jpg'),
+        //       fit: BoxFit.cover,
+        //     ),
+        //   ),
+        // ),
         Container(
           padding: const EdgeInsets.all(30),
           width: MediaQuery.of(context).size.width,

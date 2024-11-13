@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Widget/Main_widget/main_object.dart';
 import 'package:flutter_application_2/Widget/graph_widget/Graph.dart';
 import 'package:flutter_application_2/Widget/Table_widget/table.dart';
+import 'package:flutter_application_2/Widget/setup_widget/setup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "My title",
+      theme: ThemeData(brightness: Brightness.dark),
       home: DefaultTabController(
         length: 10,
         child: Scaffold(
@@ -37,26 +39,43 @@ class MyApp extends StatelessWidget {
             ),
             backgroundColor: const Color.fromARGB(255, 35, 43, 77),
           ),
-          body: const TabBarView(
+          body: Stack(
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Ledtime(),
-                  TempMaxMin(),
-                  IconStatus(),
-                ],
+              Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/background.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
-              Background(),
-              Tabledata(),
-              Center(child: Text('Setup Tab')),
-              Center(child: Text('Message Tab')),
-              Center(child: Text('Sim Tab')),
-              Center(child: Text('Auto Tab')),
-              Center(child: Text('Option Tab')),
-              Center(child: Text('Adjust Tab')),
-              Center(
-                child: ExitAppTab(),
+              const TabBarView(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Ledtime(),
+                      TempMaxMin(),
+                      IconStatus(),
+                    ],
+                  ), //Main_page
+                  Background(), //Graph_page
+                  Tabledata(), //Table_page
+                  Row(
+                    children: [
+                      SetupPage(),
+                      Alarm(),
+                    ],
+                  ), //Setup_page
+                  Center(child: Text('Message Tab')),
+                  Center(child: Text('Sim Tab')),
+                  Center(child: Text('Auto Tab')),
+                  Center(child: Text('Option Tab')),
+                  Center(child: Text('Adjust Tab')),
+                  Center(
+                    child: ExitAppTab(),
+                  ),
+                ],
               ),
             ],
           ),

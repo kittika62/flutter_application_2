@@ -47,16 +47,16 @@ class TempMaxMin extends StatelessWidget {
                 '00.00',
                 style: TextStyle(
                   fontSize: 180,
-                  color: Colors.black,
+                  // color: Colors.black,
                 ),
               ),
             ),
             ElevatedButton(
               onPressed: () {
-                print('Button Pressed');
+                //print('Button Pressed');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 4, 31, 53),
+                backgroundColor: const Color.fromARGB(255, 6, 61, 106),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -88,14 +88,14 @@ class TempMaxMin extends StatelessWidget {
               'MAX',
               style: TextStyle(
                 fontSize: 25,
-                color: Colors.black,
+                // color: Colors.black,
               ),
             ),
             Text(
               '00.00',
               style: TextStyle(
                 fontSize: 25,
-                color: Colors.black,
+                // color: Colors.black,
               ),
             ),
             Column(
@@ -105,14 +105,14 @@ class TempMaxMin extends StatelessWidget {
                   'MIN',
                   style: TextStyle(
                     fontSize: 25,
-                    color: Colors.black,
+                    // color: Colors.black,
                   ),
                 ),
                 Text(
                   '00.00',
                   style: TextStyle(
                     fontSize: 25,
-                    color: Colors.black,
+                    // color: Colors.black,
                   ),
                 ),
               ],

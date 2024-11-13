@@ -71,38 +71,128 @@ class Tabledata extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Expanded(
-                  flex: 1,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            "Start date :",
-                            style: TextStyle(
+                Expanded(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Row(
+                          children: [
+                            Text(
+                              "Start date :",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            StartSelectDate(),
+                          ],
+                        ),
+                        const Row(
+                          children: [
+                            Text(
+                              "End date :",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                            SizedBox(width: 20),
+                            EndSelectDate(),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        const Row(
+                          children: [
+                            Text(
+                              "Send data to mail",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                            SizedBox(width: 20),
+                            Icon(
+                              Icons.mail,
                               color: Colors.white,
-                              fontSize: 20,
+                              size: 30.0,
+                            )
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8, vertical: 0),
+                          child: TextFormField(
+                            style: const TextStyle(color: Colors.white),
+                            decoration: const InputDecoration(
+                              border: UnderlineInputBorder(),
+                              labelText: 'File name',
+                              labelStyle: TextStyle(color: Colors.white),
+                              fillColor: Colors.white,
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
+                              ),
                             ),
                           ),
-                          SizedBox(width: 10),
-                          StartSelectDate(),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "End date :",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8, vertical: 0),
+                          child: TextFormField(
+                            style: const TextStyle(color: Colors.white),
+                            decoration: const InputDecoration(
+                              border: UnderlineInputBorder(),
+                              labelText: 'E-mail',
+                              labelStyle: TextStyle(color: Colors.white),
+                              fillColor: Colors.white,
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
+                              ),
                             ),
                           ),
-                          SizedBox(width: 20),
-                          EndSelectDate(),
-                        ],
-                      ),
-                    ],
+                        ),
+                        const SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 20, vertical: 10),
+                                minimumSize: const Size(290, 50),
+                              ),
+                              child: const Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    'Send',
+                                    style: TextStyle(
+                                      fontSize: 16.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10),
+                                  Icon(Icons.send),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -310,8 +400,7 @@ class StyledTableCell extends StatelessWidget {
   final String text;
   final bool isHeader;
 
-  const StyledTableCell({required this.text, this.isHeader = false, Key? key})
-      : super(key: key);
+  const StyledTableCell({required this.text, this.isHeader = false, super.key});
 
   @override
   Widget build(BuildContext context) {
