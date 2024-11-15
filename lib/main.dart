@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
                   Row(
                     children: [
                       SetupPage(),
-                      Alarm(),
+                      TempSettingAlarm(),
                     ],
                   ), //Setup_page
                   Center(child: Text('Message Tab')),
