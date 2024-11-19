@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/Widget/Adjust_widget/adjust.dart';
 import 'package:flutter_application_2/Widget/Main_widget/main_object.dart';
+import 'package:flutter_application_2/Widget/Message_widget/message.dart';
 import 'package:flutter_application_2/Widget/graph_widget/Graph.dart';
 import 'package:flutter_application_2/Widget/Table_widget/table.dart';
 import 'package:flutter_application_2/Widget/setup_widget/setup.dart';
@@ -67,11 +69,11 @@ class MyApp extends StatelessWidget {
                       TempSettingAlarm(),
                     ],
                   ), //Setup_page
-                  Center(child: Text('Message Tab')),
+                  MessageMainWid(),
                   Center(child: Text('Sim Tab')),
                   Center(child: Text('Auto Tab')),
                   Center(child: Text('Option Tab')),
-                  Center(child: Text('Adjust Tab')),
+                  AdjustMainWid(),
                   Center(
                     child: ExitAppTab(),
                   ),
@@ -93,6 +95,9 @@ class ExitAppTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () => exit(0),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color.fromARGB(255, 61, 73, 120),
+      ),
       child: const Text('Exit App'),
     );
   }
