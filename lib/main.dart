@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Widget/Adjust_widget/adjust.dart';
 import 'package:flutter_application_2/Widget/Main_widget/main_object.dart';
 import 'package:flutter_application_2/Widget/Message_widget/message.dart';
+import 'package:flutter_application_2/Widget/Sim_widget/sim.dart';
 import 'package:flutter_application_2/Widget/graph_widget/Graph.dart';
 import 'package:flutter_application_2/Widget/Table_widget/table.dart';
 import 'package:flutter_application_2/Widget/setup_widget/setup.dart';
@@ -69,8 +70,23 @@ class MyApp extends StatelessWidget {
                       TempSettingAlarm(),
                     ],
                   ), //Setup_page
-                  MessageMainWid(),
-                  Center(child: Text('Sim Tab')),
+                  Row(
+                    children: [
+                      Column(
+                        children: [
+                          MessageMainWid(),
+                          Message2(),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Message3(),
+                          Message4(),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SimMobileNet(),
                   Center(child: Text('Auto Tab')),
                   Center(child: Text('Option Tab')),
                   AdjustMainWid(),
