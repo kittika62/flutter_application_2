@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Widget/Adjust_widget/adjust.dart';
 import 'package:flutter_application_2/Widget/Main_widget/main_object.dart';
 import 'package:flutter_application_2/Widget/Message_widget/message.dart';
+import 'package:flutter_application_2/Widget/Option_widget/option.dart';
 import 'package:flutter_application_2/Widget/Sim_widget/sim.dart';
 import 'package:flutter_application_2/Widget/graph_widget/Graph.dart';
 import 'package:flutter_application_2/Widget/Table_widget/table.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       title: "My title",
       theme: ThemeData(brightness: Brightness.dark),
       home: DefaultTabController(
-        length: 10,
+        length: 9,
         child: Scaffold(
           appBar: AppBar(
             bottom: const TabBar(
@@ -34,7 +35,6 @@ class MyApp extends StatelessWidget {
                 Tab(text: 'SETUP'),
                 Tab(text: 'MESSAGE'),
                 Tab(text: 'SIM'),
-                Tab(text: 'AUTO'),
                 Tab(text: 'OPTION'),
                 Tab(text: 'ADJUST'),
                 Tab(text: 'EXIT'),
@@ -86,10 +86,9 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SimMobileNet(),
-                  Center(child: Text('Auto Tab')),
-                  Center(child: Text('Option Tab')),
-                  AdjustMainWid(),
+                  SimMobileNet(), //sim
+                  AutoSendTemp(), //option
+                  AdjustMainWid(), //adjust
                   Center(
                     child: ExitAppTab(),
                   ),
